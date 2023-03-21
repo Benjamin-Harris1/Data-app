@@ -3,10 +3,11 @@
 window.addEventListener("load", startApp);
 
 function startApp() {
-  document.querySelector("#showdetailsbtn").addEventListener("click");
+  document.querySelector("#showdetailsbtn").addEventListener("click", somefunction);
 }
 
 const heather = {
+  image: "",
   name: "Heather Swanson",
   occupation: "Athlete",
   age: "Unknown",
@@ -27,6 +28,7 @@ function showDetails(person) {
   const HTML =
     /*html*/
     `
+    <p> <span>${person.image}</span></p>
     <h1>Name: <span>${person.name}</span></h1>
     <p>Occupation: <span>${person.occupation}</span></p>
     <p>Age: <span>${person.age}</span></spa></p>
