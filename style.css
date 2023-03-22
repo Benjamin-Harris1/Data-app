@@ -23,6 +23,56 @@ footer {
   padding: 10px;
 }
 
+/* Dialog styling */
+#dialog-name {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-occupation {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-age {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-gender {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-religion {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-hair {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-voicedby {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-appearances {
+  text-align: center;
+  font-weight: bold;
+}
+#dialog-btn {
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  color: var(--text-color-light);
+  background-color: var(--green);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Grid */
 #characters {
   text-align: center;
 }
