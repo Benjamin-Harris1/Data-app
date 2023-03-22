@@ -4,7 +4,25 @@ window.addEventListener("load", startApp);
 
 function startApp() {
   const data = getData;
-  document.querySelector(person.image).addEventListener("click", somefunction);
+
+  const heather = {
+    image: "picture/Heather_Swanson.webp",
+    name: "Heather Swanson",
+    occupation: "Athlete",
+    age: "",
+    gender: "Female, formerly male",
+    religion: "",
+    haircolor: "Brown",
+    voicedby: "Trey Parker",
+    appearances: "S23 EP07, Board Girls",
+  };
+
+  const random = {
+    name: "Kurt",
+    occupation: "",
+  };
+
+  showCharacter(heather);
 }
 
 function getData() {
@@ -16,30 +34,12 @@ function showAllCharacters(list) {
   showCharacter(person);
 }
 
-const heather = {
-  image: "picture/Heather_Swanson.webp",
-  name: "Heather Swanson",
-  occupation: "Athlete",
-  age: "Unknown",
-  gender: "Female, formerly male",
-  religion: "",
-  haircolor: "Brown",
-  voicedby: "Trey Parker",
-  appearances: "S23 EP07, Board Girls",
-};
-
-const random = {
-  name: "Kurt",
-  occupation: "",
-};
-
 function showCharacter(person) {
-  const details = document.querySelector("#characters");
-
   const HTML =
     /*html*/
     `
-    <img src="${person.image}"alt="" style ="width 10%" image">
+    <article class="grid-item">
+    <img src="${person.image}"style ="width 10%" image">
     <h1><span>${person.name}</span></h1>
     <p><strong>Occupation: </strong><span>${person.occupation}</span></p>
     <p><strong>Age: </strong><span>${person.age}</span></spa></p>
@@ -47,13 +47,25 @@ function showCharacter(person) {
     <p><strong>Hair color: </strong><span>${person.haircolor}</span></p>
     <p><strong>Voiced by: </strong><span>${person.voicedby}</span></p>
     <p><strong>Appearances: </strong><span>${person.appearances}</span></p>
+    </article>
       `;
+  document.querySelector("#characters").insertAdjacentHTML("beforeend", HTML);
+  document.querySelector("#characters article:last-child").addEventListener("click", characterClicked);
 
-  details.insertAdjacentHTML("beforeend", HTML);
+  function characterClicked() {
+    document.querySelector("#dialog-image").textContent = person.image;
+    document.querySelector("#dialog-name").textContent = person.name;
+    document.querySelector("#dialog-occupation").textContent = person.occupation;
+    document.querySelector("#dialog-age").textContent = person.age;
+    document.querySelector("#dialog-gender").textContent = person.gender;
+    document.querySelector("#dialog-religion").textContent = person.religion;
+    document.querySelector("#dialog-hair").textContent = person.haircolor;
+    document.querySelector("#dialog-voicedby").textContent = person.voicedby;
+    document.querySelector("#dialog-appearances").textContent = person.appearances;
+    document.querySelector("#dialog").showModal();
+  }
 }
 
 function showDialog(person) {}
 
 function closeDialog() {}
-
-showCharacter(heather);

@@ -4,6 +4,7 @@ body {
   margin: 0;
 }
 
+/* Header styling */
 header {
   text-align: center;
   color: red;
@@ -12,6 +13,7 @@ header {
   padding: 10px;
 }
 
+/* Footer styling */
 footer {
   text-align: center;
   color: red;
