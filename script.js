@@ -24,17 +24,12 @@ function showCharacter(person) {
     <article class="grid-item">
     <img src="${person.image}"style ="width 10%" image">
     <h1><span>${person.name}</span></h1>
+    <p><strong>Nick name/alias: </strong><span>${person.nickname}</span></spa></p>
     <p><strong>Occupation: </strong><span>${person.occupation}</span></p>
-    <p><strong>Age: </strong><span>${person.age}</span></spa></p>
     <p><strong>Voiced by: </strong><span>${person.voicedby}</span></p>
     <p><strong>Gender: </strong><span>${person.gender}</span></p>
-    <p><strong>Religion: </strong><span>${person.religion}</span></p>
     <p><strong>Catchprase: </strong><span>${person.catchprase}</span></p>
-    <p><strong>Hair color: </strong><span>${person.haircolor}</span></p>
-    <p><strong>School grade: </strong><span>${person.schoolgrade}</span></p>
-    <p><strong>Episodes: </strong><span>${person.episodes}</span></p>
-    <p><strong>Appearances: </strong><span>${person.appearances}</span></p>
-    <p><strong>Fist Appearance: </strong><span>${person.firstappearances}</span></p>
+
     </article>
       `;
   document.querySelector("#characters").insertAdjacentHTML("beforeend", HTML);
@@ -46,11 +41,14 @@ function showCharacter(person) {
     document.querySelector("#dialog-nickname").textContent = person.nickname;
     document.querySelector("#dialog-occupation").textContent = person.occupation;
     document.querySelector("#dialog-age").textContent = person.age;
+    document.querySelector("#dialog-voicedby").textContent = person.voicedby;
     document.querySelector("#dialog-gender").textContent = person.gender;
     document.querySelector("#dialog-religion").textContent = person.religion;
     document.querySelector("#dialog-hair").textContent = person.haircolor;
-    document.querySelector("#dialog-voicedby").textContent = person.voicedby;
+    document.querySelector("#dialog-schoolgrade").textContent = person.schoolgrade;
+    document.querySelector("#dialog-episodes").textContent = person.episodes;
     document.querySelector("#dialog-appearances").textContent = person.appearances;
+    document.querySelector("#dialog-firstappearance").textContent = person.firstappearance;
     document.querySelector("#dialog").showModal();
   }
 }
