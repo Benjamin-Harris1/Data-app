@@ -2,31 +2,14 @@
 
 window.addEventListener("load", startApp);
 
-function startApp() {
-  const data = getData;
-
-  const heather = {
-    image: "picture/Heather_Swanson.webp",
-    name: "Heather Swanson",
-    occupation: "Athlete",
-    age: "",
-    gender: "Female, formerly male",
-    religion: "",
-    haircolor: "Brown",
-    voicedby: "Trey Parker",
-    appearances: "S23 EP07, Board Girls",
-  };
-
-  const random = {
-    name: "Kurt",
-    occupation: "",
-  };
-
+async function startApp() {
+  const heather = await getCharacter("JSON/heather.json");
   showCharacter(heather);
 }
 
-function getData() {
-  const data = [];
+async function getCharacter(url) {
+  const response = await fetch(url);
+  const data = await response.json();
   return data;
 }
 
@@ -43,10 +26,15 @@ function showCharacter(person) {
     <h1><span>${person.name}</span></h1>
     <p><strong>Occupation: </strong><span>${person.occupation}</span></p>
     <p><strong>Age: </strong><span>${person.age}</span></spa></p>
-    <p><strong>Gender: </strong><span>${person.gender}</span></p>
-    <p><strong>Hair color: </strong><span>${person.haircolor}</span></p>
     <p><strong>Voiced by: </strong><span>${person.voicedby}</span></p>
+    <p><strong>Gender: </strong><span>${person.gender}</span></p>
+    <p><strong>Religion: </strong><span>${person.religion}</span></p>
+    <p><strong>Catchprase: </strong><span>${person.catchprase}</span></p>
+    <p><strong>Hair color: </strong><span>${person.haircolor}</span></p>
+    <p><strong>School grade: </strong><span>${person.schoolgrade}</span></p>
+    <p><strong>Episodes: </strong><span>${person.episodes}</span></p>
     <p><strong>Appearances: </strong><span>${person.appearances}</span></p>
+    <p><strong>Fist Appearance: </strong><span>${person.firstappearances}</span></p>
     </article>
       `;
   document.querySelector("#characters").insertAdjacentHTML("beforeend", HTML);
