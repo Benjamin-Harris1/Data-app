@@ -24,12 +24,7 @@ function showCharacter(person) {
     <article class="grid-item">
     <img src="${person.image}"style ="width 10%" image">
     <h1><span>${person.name}</span></h1>
-    <p><strong>Nick name/alias: </strong><span>${person.nickname}</span></spa></p>
-    <p><strong>Occupation: </strong><span>${person.occupation}</span></p>
-    <p><strong>Voiced by: </strong><span>${person.voicedby}</span></p>
-    <p><strong>Gender: </strong><span>${person.gender}</span></p>
-    <p><strong>Catchprase: </strong><span>${person.catchprase}</span></p>
-
+    <p><strong>Aka: </strong><span>${person.nickname}</span></spa></p>
     </article>
       `;
   document.querySelector("#characters").insertAdjacentHTML("beforeend", HTML);
