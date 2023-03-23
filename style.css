@@ -1,9 +1,7 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: antiquewhite;
   margin: 0;
+  font-size: 1.5em;
 }
-
 /* Header styling */
 header {
   text-align: center;
@@ -23,55 +21,108 @@ footer {
   padding: 10px;
 }
 
+/* main styling */
+main {
+  background: gainsboro;
+  animation: fadeIn 0.4s;
+}
+
 /* Dialog styling */
 #dialog {
   text-align: center;
   font-weight: bold;
 }
 
-#dialog-name {
-}
-
-#dialog-nickname {
-}
-#dialog-occupation {
-}
-#dialog-age {
-}
-#dialog-voicedby {
-}
-#dialog-gender {
-}
-#dialog-religion {
-}
-#dialog-hair {
-}
-
 #dialog-btn {
-  font-weight: 300;
-  font-size: 1em;
+  font-weight: 500;
+  font-size: 1.5em;
   text-align: center;
   cursor: pointer;
-  border: none;
-  border-radius: 0;
-  color: var(--text-color-light);
+  border-radius: 10px;
+  color: black;
   background-color: var(--green);
-  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.5em 1em;
   width: 100%;
-  max-width: 380px;
+  max-width: 500px;
+}
+
+dialog {
+  border-color: var(--green);
+  background-color: palegoldenrod;
+  width: 40vw;
+  height: 70vh;
+  padding: 1em 2em;
+}
+
+dialog::backdrop {
+  background: rgba(218, 224, 224, 0.8);
+}
+
+.dialog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Grid */
-#characters {
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1em;
   text-align: center;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 30px;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1500px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.grid-item {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1.5em;
+  background-color: burlywood;
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  cursor: pointer;
+}
+
+.grid-item:hover {
+  box-shadow: 0 8px 16px 0;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.grid-item p {
+  margin: 0.3em 0;
+}
+
+/* Form styling */
+form {
+  margin: 2em auto 0;
+  padding: 1em 1em 2em;
+  text-align: center;
 }
