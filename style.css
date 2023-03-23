@@ -28,6 +28,11 @@ footer {
   text-align: center;
   font-weight: bold;
 }
+
+#dialog-nickname {
+  text-align: center;
+  font-weight: bold;
+}
 #dialog-occupation {
   text-align: center;
   font-weight: bold;

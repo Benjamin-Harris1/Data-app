@@ -3,7 +3,7 @@
 window.addEventListener("load", startApp);
 
 async function startApp() {
-  const heather = await getCharacter("JSON/heather.json");
+  const heather = await getCharacter("data/heather.json");
   showCharacter(heather);
 }
 
@@ -43,6 +43,7 @@ function showCharacter(person) {
   function characterClicked() {
     document.querySelector("#dialog-image").textContent = person.image;
     document.querySelector("#dialog-name").textContent = person.name;
+    document.querySelector("#dialog-nickname").textContent = person.nickname;
     document.querySelector("#dialog-occupation").textContent = person.occupation;
     document.querySelector("#dialog-age").textContent = person.age;
     document.querySelector("#dialog-gender").textContent = person.gender;
