@@ -14,10 +14,6 @@ async function getCharacter(url) {
   return data;
 }
 
-function showAllCharacters(list) {
-  showCharacter(person);
-}
-
 function showCharacter(person) {
   const HTML =
     /*html*/
@@ -32,7 +28,7 @@ function showCharacter(person) {
   document.querySelector("#characters article:last-child").addEventListener("click", characterClicked);
 
   function characterClicked() {
-    document.querySelector("#dialog-image").textContent = person.image;
+    document.querySelector("#dialog-image").src = person.image;
     document.querySelector("#dialog-name").textContent = person.name;
     document.querySelector("#dialog-nickname").textContent = person.nickname;
     document.querySelector("#dialog-occupation").textContent = person.occupation;
@@ -44,11 +40,14 @@ function showCharacter(person) {
     document.querySelector("#dialog-schoolgrade").textContent = person.schoolGrade;
     document.querySelector("#dialog-episodes").textContent = person.episodes;
     document.querySelector("#dialog-appearances").textContent = person.appearances;
-    document.querySelector("#dialog-firstappearance").textContent = person.firstappearance;
+    document.querySelector("#dialog-firstappearance").textContent = person.firstAppearance;
     document.querySelector("#dialog").showModal();
   }
 }
 
+function showCharacterModal(list) {
+  showCharacter(person);
+}
 function showDialog(person) {}
 
 function closeDialog() {}

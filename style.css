@@ -23,15 +23,11 @@ footer {
 
 /* main styling */
 main {
-  background: gainsboro;
+  background: #ffebc0;
   animation: fadeIn 0.4s;
 }
 
 /* Dialog styling */
-#dialog {
-  text-align: center;
-  font-weight: bold;
-}
 
 #dialog-btn {
   font-weight: 500;
@@ -53,6 +49,7 @@ dialog {
   width: 40vw;
   height: 70vh;
   padding: 1em 2em;
+  text-align: center;
 }
 
 dialog::backdrop {
@@ -64,6 +61,12 @@ dialog::backdrop {
   grid-template-columns: 1fr 1fr;
 }
 
+#dialog-image {
+  object-fit: cover;
+  object-position: top;
+  align-self: center;
+  height: 400px;
+}
 /* Grid */
 
 .grid-container {
