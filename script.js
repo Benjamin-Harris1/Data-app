@@ -8,7 +8,7 @@ async function startApp() {
   character.forEach(showCharacter);
 }
 
-async function getCharacter(url) {
+async function getCharacter() {
   const response = await fetch("data/data.json");
   const data = await response.json();
   return data;
