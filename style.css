@@ -5,8 +5,8 @@ body {
 /* Header styling */
 header {
   text-align: center;
-  color: red;
-  background-color: turquoise;
+  color: black;
+  background-color: #ddb892;
   margin: 0;
   padding: 10px;
 }
@@ -14,8 +14,9 @@ header {
 /* Footer styling */
 footer {
   text-align: center;
-  color: red;
-  background-color: turquoise;
+  color: black;
+  font-weight: bold;
+  background-color: #ddb892;
   font-size: small;
   margin: 0;
   padding: 10px;
